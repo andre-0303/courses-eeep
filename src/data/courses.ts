@@ -1,3 +1,9 @@
+import inforImg from "../assets/infor.png";
+import admImg from "../assets/adm.png";
+import agroImg from "../assets/agro.png";
+import edfImg from "../assets/edf.png";
+
+
 export const courses = [
   {
     id: "informatica",
@@ -5,7 +11,7 @@ export const courses = [
     description:
       "Aprenda a desenvolver sites, sistemas e trabalhar com tecnologia.",
     skills: ["Programação", "Banco de Dados", "Redes", "Web Design"],
-    image: "/images/informatica.jpg",
+    image: inforImg,
   },
   {
     id: "administracao",
@@ -13,7 +19,7 @@ export const courses = [
     description:
       "Gestão, liderança e finanças para o mercado moderno.",
     skills: ["Gestão de Pessoas", "Empreendedorismo", "Contabilidade"],
-    image: "/images/administracao.jpg",
+    image: admImg,
   },
   {
     id: "agropecuaria",
@@ -21,7 +27,7 @@ export const courses = [
     description:
       "Sustentabilidade e produção agrícola de forma inteligente.",
     skills: ["Cultivo", "Zootecnia", "Irrigação", "Manejo"],
-    image: "/images/agropecuaria.jpg",
+    image: agroImg,
   },
   {
     id: "edificacoes",
@@ -29,6 +35,6 @@ export const courses = [
     description:
       "Projetos e obras que transformam o espaço ao seu redor.",
     skills: ["Desenho técnico", "Topografia", "Construção Civil"],
-    image: "/images/edificacoes.jpg",
+    image: edfImg,
   },
 ];
