@@ -3,6 +3,10 @@ import admImg from "../assets/adm.png";
 import agroImg from "../assets/agro.png";
 import edfImg from "../assets/edf.png";
 
+import alunoAdm from "../assets/adm-aluno.png";
+import alunoAgro from "../assets/agro-aluno.png";
+import alunoEdf from "../assets/edf-aluno.png";
+import alunoInfor from "../assets/infor-aluno.png";
 
 export const courses = [
   {
@@ -12,6 +16,12 @@ export const courses = [
       "Aprenda a desenvolver sites, sistemas e trabalhar com tecnologia.",
     skills: ["Programação", "Banco de Dados", "Redes", "Web Design"],
     image: inforImg,
+    alunoImg: alunoInfor,
+    aluno: {
+      nome: "Artur Marciel",
+      frase:
+        "Transformei minha curiosidade por tecnologia em um futuro promissor!",
+    },
     details: [
       {
         title: "Sobre o curso",
@@ -35,8 +45,14 @@ export const courses = [
     name: "Administração",
     description:
       "Gestão, liderança e finanças para o mercado moderno.",
-    skills: ["Gestão de Pessoas", "Empreendedorismo", "Contabilidade"],
+    skills: ["Gestão de Pessoas", "Empreendedorismo", "Contabilidade", "Ética Profissional"],
     image: admImg,
+    alunoImg: alunoAdm,
+    aluno: {
+      nome: "Alice",
+      frase:
+        "Aprendi a liderar, planejar e transformar ideias em resultados!",
+    },
     details: [
       {
         title: "Sobre o curso",
@@ -62,6 +78,12 @@ export const courses = [
       "Sustentabilidade e produção agrícola de forma inteligente.",
     skills: ["Cultivo", "Zootecnia", "Irrigação", "Manejo"],
     image: agroImg,
+    alunoImg: alunoAgro,
+    aluno: {
+      nome: "Raimundo Neto",
+      frase:
+        "Na EEEP, descobri que o campo pode ser tecnológico e sustentável.",
+    },
     details: [
       {
         title: "Sobre o curso",
@@ -85,8 +107,14 @@ export const courses = [
     name: "Edificações",
     description:
       "Projetos e obras que transformam o espaço ao seu redor.",
-    skills: ["Desenho técnico", "Topografia", "Construção Civil"],
+    skills: ["Desenho técnico", "Topografia", "Construção Civil", "AutoCad"],
     image: edfImg,
+    alunoImg: alunoEdf,
+    aluno: {
+      nome: "Maria",
+      frase:
+        "Construir o futuro começa com cada projeto que aprendemos aqui.",
+    },
     details: [
       {
         title: "Sobre o curso",
@@ -106,4 +134,3 @@ export const courses = [
     ],
   },
 ];
-
