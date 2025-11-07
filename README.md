@@ -1,50 +1,115 @@
-# React + TypeScript + Vite
+# 🏫 Cursos da EEEP DJMM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um **site institucional moderno e responsivo** da  
+**EEEP Deputado José Maria Melo**, desenvolvido com **React**, **Vite**, **Tailwind CSS**, **Framer Motion** e **Shadcn/UI**.  
+O objetivo é apresentar os **cursos técnicos**, **informações sobre a escola** e **dados de contato**, unindo um design limpo com animações suaves e interatividade.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ **React + Vite** — Framework e bundler principal  
+- 🎨 **Tailwind CSS** — Estilização moderna e responsiva  
+- 🧩 **Shadcn/UI** — Componentes de interface prontos e acessíveis  
+- 🌀 **Framer Motion** — Animações fluidas e interativas  
+- 🧭 **React Router DOM** — Navegação entre páginas  
+- 📦 **Lucide Icons** — Ícones leves e consistentes  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🏗️ Estrutura do Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+src/
+├── assets/        # Imagens e ícones da escola
+├── components/    # Componentes reutilizáveis (Header, HeroSection, etc.)
+├── data/          # Dados estáticos dos cursos
+├── pages/         # Páginas principais (Home, Course, About, Contact)
+└── main.tsx       # Ponto de entrada da aplicação
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🧭 Páginas
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### 🏠 **Home**  
+Apresenta o nome da escola e os cursos técnicos oferecidos, com links individuais para cada um.
+
+### 💻 **Cursos**  
+Cada curso possui uma página detalhada com:  
+- Descrição geral  
+- Habilidades desenvolvidas  
+- Accordion com informações sobre o curso, mercado e estágio  
+- Foto e frase de destaque de um aluno  
+
+### 🏫 **Sobre a Escola**  
+Seção institucional com:  
+- Missão, Visão e Valores  
+- Estrutura física e diferenciais  
+- Animações e layout 100% responsivo  
+
+### 📞 **Contato**  
+Inclui:  
+- Endereço, telefone e horário de funcionamento  
+- Mapa interativo via Google Maps  
+- Sessão “Fale Conosco” com link de e-mail  
+
+---
+
+## ⚙️ Instalação e Uso
+
+1. **Clone o repositório** e instale as dependências:
+   ```bash
+   git clone https://github.com/andre-0303/courses-eeep.git
+   cd projeto-eeep
+   pnpm install
+   ```
+
+2. **Execute o projeto em modo de desenvolvimento**:
+   ```bash
+   pnpm run dev
+   ```
+
+3. **Acesse no navegador**:
+   ```
+   http://localhost:5173
+   ```
+
+---
+
+## 🧱 Componentes Principais
+
+- **Header** — Menu superior com navegação e dropdown de cursos  
+- **HeroSection** — Seção inicial com animação e botão de acesso aos cursos  
+- **Course** — Página individual de cada curso com design interativo  
+- **About** — Página institucional da escola  
+- **Contact** — Página com informações de contato e mapa integrado  
+
+---
+
+## 🖼️ Design e Identidade Visual
+
+O design segue a identidade da **EEEP Dep. José Maria Melo**, com predominância de **tons verdes** e contraste em branco, priorizando **legibilidade, acessibilidade e modernidade**.
+
+---
+
+## 💡 Ideias Futuras
+
+- Adicionar formulário de contato funcional (Formspree ou EmailJS)  
+- Área administrativa para atualização de cursos  
+- Integração com API para notícias e eventos  
+- Modo escuro (Dark Mode)  
+
+---
+
+## 📜 Licença
+
+Este projeto é de uso educacional e pode ser adaptado livremente para fins pedagógicos ou institucionais.
+
+---
+
+## 👨‍💻 Desenvolvido por
+
+**André Bandeira**  
+*Front-End Developer | React, Next.js, Tailwind CSS*  
+[💼 GitHub](https://github.com/andre-0303)
