@@ -25,26 +25,32 @@ export const HeroSection = () => {
         Ensino médio integrado ao técnico — formando profissionais para o futuro.
       </motion.p>
 
-      {/* Botão de ação (CTA) */}
       <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-        className="mt-8"
-      >
-        <Link
-          to="#cursos"
-          className="inline-flex items-center gap-2 bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-xl hover:bg-green-50 transition-all duration-300"
-        >
-          <span>Conheça nossos cursos</span>
-          <motion.span
-            animate={{ y: [0, 5, 0] }}
-            transition={{ repeat: Infinity, duration: 1.2 }}
-          >
-            <ArrowDown className="w-5 h-5" />
-          </motion.span>
-        </Link>
-      </motion.div>
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.6 }}
+  className="mt-8"
+>
+  <button
+    onClick={() => {
+      const section = document.getElementById("cursos");
+      if (section) {
+        const top = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }}
+    className="inline-flex items-center gap-2 bg-white text-green-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-xl hover:bg-green-50 transition-all duration-300"
+  >
+    <span>Conheça nossos cursos</span>
+    <motion.span
+      animate={{ y: [0, 5, 0] }}
+      transition={{ repeat: Infinity, duration: 1.2 }}
+    >
+      <ArrowDown className="w-5 h-5" />
+    </motion.span>
+  </button>
+</motion.div>
+
     </section>
   );
 };
