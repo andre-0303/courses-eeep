@@ -1,5 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { courses } from "../data/courses";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { ArrowLeft } from "lucide-react";
+
 
 export const Course = () => {
   const { id } = useParams();
@@ -17,11 +25,13 @@ export const Course = () => {
 
   return (
     <div className="max-w-2xl mx-auto mt-6">
-      <img
+      <div className="flex justify-center items-center">
+        <img
         src={course.image}
         alt={course.name}
-        className="rounded-xl w-full h-56 object-cover"
+        className="rounded-xl w-56 h-56 object-cover"
       />
+      </div>
       <h1 className="text-2xl font-bold mt-4 text-green-700">
         {course.name}
       </h1>
@@ -34,11 +44,30 @@ export const Course = () => {
         ))}
       </ul>
 
+      {/* Accordion de informações extras */}
+{course.details && (
+  <div className="mt-6">
+    <Accordion type="single" collapsible>
+      {course.details.map((item, index) => (
+        <AccordionItem key={index} value={`item-${index}`}>
+          <AccordionTrigger className="text-green-800 font-semibold">
+            {item.title}
+          </AccordionTrigger>
+          <AccordionContent className="text-gray-700">
+            {item.content}
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  </div>
+)}
+
+
       <Link
         to="/"
-        className="block mt-6 text-green-700 underline hover:opacity-80"
+        className="block mt-6 text-green-700 underline hover:opacity-80 flex items-center"
       >
-        ← Voltar para os cursos
+        <ArrowLeft className="w-5 h-5"/> Voltar para os cursos
       </Link>
     </div>
   );
